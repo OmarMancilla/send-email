@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function validar2(e){
         if(e.target.value.trim() !=='' && !validarEmail(e.target.value)){
         mostrarAlerta('El email no es válido', e.target.parentElement);
-            email[e.target.name] = ''; // hace que se reinicie y se pueda bloquear la opcion de enviar.
+        // email[e.target.name] = ''; // Debido a que no es un campo obligatorio se quita esta linea de cofigo para que no se bloquee el btnSybmit en caso de borrar o cancelar el correo de este espacio // hace que se reinicie y se pueda bloquear la opcion de enviar.
             comprobarEmail(); // se llama la funcion por si se borra el correo. hace que se bloque la funcion de enviar. antes del return para que la lea
             return;
         };
